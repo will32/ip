@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.enable('trust proxy');
+app.set('trust proxy', true);
+
 app.get('/', (req, res) => {
     let { ip } = req;
     if (ip.startsWith("::ffff:")) {
