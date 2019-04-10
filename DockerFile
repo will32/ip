@@ -1,4 +1,4 @@
-FROM node:carbon-jessie
+FROM stefanscherer/node-windows
 
 WORKDIR /app
 
@@ -6,4 +6,6 @@ COPY . /app
 
 RUN npm install
 
-CMD npm run debug
+EXPOSE 3000
+
+CMD npm start
